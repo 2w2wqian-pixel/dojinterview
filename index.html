@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>DOJ Trainee Solicitor Interview - 律政司見習律師面試復習資料（完整版）</title>
+    <style>
+        :root {
+            --bg: #faf3e0;
+            --card-bg: #fef9f0;
+            --text: #3e2c1c;
+            --text-light: #5c3a21;
+            --accent: #8b5e3c;
+            --accent-gold: #b8860b;
+            --accent-dark: #4a2c17;
+            --border: #c4a882;
+            --border-light: #dcc8a8;
+            --tab-active: #6b3a2a;
+            --tab-bg: #e8d5c0;
+            --hover: #f0e2d0;
+            --shadow: 0 2px 8px rgba(74, 44, 23, 0.12);
+            --shadow-lg: 0 6px 20px rgba(74, 44, 23, 0.18);
+            --radius: 8px;
+            --radius-sm: 5px;
+            --font-heading: 'Georgia', 'Times New Roman', 'Noto Serif TC', 'Source Han Serif TC', 'Songti SC', serif;
+            --font-body: 'Georgia', 'Times New Roman', 'Noto Serif TC', 'Source Han Serif TC', 'Songti SC', serif;
+            --transition: 0.25s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            background-image: radial-gradient(ellipse at 20% 20%, rgba(184, 134, 11, 0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 60%, rgba(139, 94, 60, 0.05) 0%, transparent 60%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L30 55 M5 30 L55 30' stroke='%23c4a882' stroke-width='0.15' opacity='0.4'/%3E%3C/svg%3E");
+            color: var(--text);
+            line-height: 1.65;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+        }
+        .header {
+            background: linear-gradient(180deg, #4a2c17 0%, #3e2412 100%);
+            color: #f5e6c8;
+            text-align: center;
+            padding: clamp(16px, 3vw, 24px) clamp(12px, 2vw, 20px);
+            border-bottom: 4px solid var(--accent-gold);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+        }
+        .header h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+            letter-spacing: 0.04em;
+            margin: 0 0 4px;
+            font-weight: 700;
+        }
+        .header .subtitle {
+            font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+            opacity: 0.85;
+            letter-spacing: 0.06em;
+            font-style: italic;
+        }
+        .header .ornament {
+            display: inline-block;
+            width: clamp(40px, 8vw, 60px);
+            height: 2px;
+            background: var(--accent-gold);
+            margin: 6px 0;
+            opacity: 0.7;
+        }
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: clamp(10px, 2vw, 20px);
+        }
+        .tab-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-bottom: 16px;
+            background: #e8d5c0;
+            border-radius: var(--radius);
+            padding: 4px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 95px;
+            z-index: 90;
+        }
+        .tab-btn {
+            flex: 1 1 auto;
+            min-width: 70px;
+            padding: 9px 8px;
+            border: 1px solid transparent;
+            background: transparent;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: clamp(0.65rem, 1.2vw, 0.78rem);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition);
+            color: var(--text-light);
+            text-align: center;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+        .tab-btn:hover {
+            background: var(--hover);
+            color: var(--accent-dark);
+        }
+        .tab-btn.active {
+            background: var(--tab-active);
+            color: #fef9f0;
+            font-weight: 700;
+            box-shadow: 0 2px 6px rgba(74, 44, 23, 0.3);
+            border-color: var(--accent-gold);
+        }
+        .tab-panel {
+            display: none;
+            animation: fadeSlide 0.35s ease;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            color: var(--accent-dark);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title .icon {
+            font-size: 1.3em;
+        }
+        .accordion {
+            margin-bottom: 10px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: box-shadow var(--transition);
+        }
+        .accordion:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        .accordion-header {
+            width: 100%;
+            padding: clamp(10px, 2vw, 14px) clamp(12px, 2.5vw, 18px);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+            font-weight: 700;
+            color: var(--accent-dark);
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            transition: background var(--transition);
+            letter-spacing: 0.02em;
+        }
+        .accordion-header:hover {
+            background: #fdf5e9;
+        }
+        .accordion-header .arrow {
+            font-size: 0.7em;
+            transition: transform var(--transition);
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+        .accordion.open .accordion-header .arrow {
+            transform: rotate(180deg);
+        }
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease, padding 0.35s ease;
+            padding: 0 18px;
+        }
+        .accordion.open .accordion-body {
+            max-height: 12000px;
+            padding: 8px 18px 16px;
+        }
+        .mindmap {
+            background: #fdf8f0;
+            border: 1px dashed var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: clamp(8px, 2vw, 14px);
+            margin: 8px 0 12px;
+            font-family: 'Courier New', 'Noto Sans Mono CJK', monospace;
+            font-size: clamp(0.65rem, 1.1vw, 0.78rem);
+            line-height: 1.5;
+            white-space: pre-wrap;
+            color: #3e2c1c;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .mindmap .root {
+            color: var(--accent-dark);
+            font-weight: 700;
+        }
+        .mindmap .branch {
+            color: #6b3a2a;
+        }
+        .mindmap .leaf {
+            color: #8b5e3c;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        @media (max-width: 640px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .tab-nav {
+                top: 68px;
+                gap: 1px;
+                padding: 2px;
+            }
+            .tab-btn {
+                padding: 7px 4px;
+                font-size: 0.62rem;
+                min-width: 45px;
+                letter-spacing: 0;
+            }
+            .accordion-header {
+                font-size: 0.75rem;
+                padding: 8px 10px;
+            }
+            .accordion-body {
+                padding: 0 10px;
+            }
+            .accordion.open .accordion-body {
+                padding: 4px 10px 10px;
+            }
+            .header h1 {
+                font-size: 0.95rem;
+            }
+        }
+        @media (max-width: 400px) {
+            .tab-btn {
+                padding: 5px 3px;
+                font-size: 0.6rem;
+                min-width: 38px;
+            }
+            .mindmap {
+                font-size: 0.6rem;
+            }
+        }
+        @media (min-width: 1200px) {
+            .main-container {
+                padding: 20px 36px;
+            }
+        }
+        @media print {
+            .tab-nav,
+            .header {
+                position: static;
+            }
+            .accordion-body {
+                max-height: none !important;
+                padding: 6px 18px 14px !important;
+            }
+            .tab-panel {
+                display: block !important;
+                page-break-before: always;
+            }
+            body {
+                font-size: 10pt;
+                background: #fff;
+            }
+        }
+        .content-col {
+            background: #fefbf6;
+            border-radius: var(--radius-sm);
+            padding: clamp(8px, 2vw, 12px);
+            border: 1px solid var(--border-light);
+        }
+        .content-col h4 {
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+            letter-spacing: 0.03em;
+            border-bottom: 1px dotted var(--border-light);
+            padding-bottom: 3px;
+        }
+        .content-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content-col li {
+            padding: 2px 0;
+            font-size: clamp(0.68rem, 1.1vw, 0.78rem);
+            position: relative;
+            padding-left: 14px;
+        }
+        .content-col li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            font-size: 0.45em;
+            color: var(--accent-gold);
+            top: 6px;
+        }
+        .highlight {
+            background: #fef3d6;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .case-ref {
+            color: #8b5e3c;
+            font-style: italic;
+        }
+        .ord-ref {
+            color: #6b3a2a;
+            font-weight: 600;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(0.65rem, 1vw, 0.78rem);
+            margin: 6px 0;
+        }
+        .info-table th,
+        .info-table td {
+            border: 1px solid var(--border-light);
+            padding: 5px 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .info-table th {
+            background: #f0e2d0;
+            font-weight: 700;
+            color: var(--accent-dark);
+            font-family: var(--font-heading);
+        }
+        .info-table td {
+            background: #fefbf6;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            margin: 2px;
+        }
+        .badge.gold {
+            background: var(--accent-gold);
+        }
+        .footer {
+            text-align: center;
+            padding: 18px;
+            color: #8b7355;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            border-top: 1px solid var(--border-light);
+            margin-top: 18px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="ornament"></div>
+        <h1>⚖️ DOJ Trainee Solicitor Interview</h1>
+        <p class="subtitle">律政司見習律師面試 · 完整復習資料</p>
+        <p class="subtitle" style="font-size:0.68rem;">Contract · Criminal · Admin/JR · Evidence · Drafting · Legislation · DOJ-Specific</p>
+    </header>
+    <div class="main-container">
+        <nav class="tab-nav" id="tabNav">
+            <button class="tab-btn active" data-tab="contract">📜 Contract<br>合約法</button>
+            <button class="tab-btn" data-tab="criminal">⚔️ Criminal<br>刑法</button>
+            <button class="tab-btn" data-tab="admin">🏛️ Admin/JR<br>行政法</button>
+            <button class="tab-btn" data-tab="evidence">🔍 Evidence<br>證據法</button>
+            <button class="tab-btn" data-tab="drafting">✍️ Drafting<br>法律草擬</button>
+            <button class="tab-btn" data-tab="legislation">📋 Legislation<br>立法程序</button>
+            <button class="tab-btn" data-tab="doj">🏢 DOJ<br>律政司專項</button>
+        </nav>
+
+        <!-- ═══════════════ TAB 1: CONTRACT LAW ═══════════════ -->
+        <div class="tab-panel active" id="contract">
+            <div class="section-title"><span class="icon">📜</span> Contract Law 合約法</div>
+            <!-- 1.1 Essential Elements -->
+            <div class="accordion"><button class="accordion-header"><span>1.1 Essential Elements 合約基本要素</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Valid Contract 有效合約</span>
+                    ├── <span class="branch">Offer 要約</span> ── <span class="leaf">Clear intention (Gibson v Manchester CC)</span>
+                    ├── <span class="branch">Acceptance 承約</span> ── <span class="leaf">Unqualified assent (Hyde v Wrench)</span>
+                    ├── <span class="branch">Consideration 約因</span> ── <span class="leaf">Something of value (Chappell v Nestlé)</span>
+                    ├── <span class="branch">Intention 意圖</span> ── <span class="leaf">Legal relations (Balfour v Balfour)</span>
+                └── <span class="branch">Certainty 確定性</span> ── <span class="leaf">Terms sufficiently certain (Scammell v Ouston)</span></div><div class="content-grid"><div class="content-col"><h4>English</h4><ul><li><b>Offer:</b> Clear indication of willingness to contract on specific terms.</li><li><b>Acceptance:</b> Unqualified assent — mirror image rule.</li><li><b>Consideration:</b> Must be <span class="highlight">sufficient</span> but need not be adequate. Past consideration invalid (exception: <span class="case-ref">Pao On v Lau Yiu Long</span>).</li><li><b>Intention:</b> Commercial presumed; domestic not (rebuttable).</li><li><b>Certainty:</b> Terms must not be vague.</li></ul></div><div class="content-col"><h4>中文</h4><ul><li><b>要約：</b>清晰表明願意按特定條款訂立合約。</li><li><b>承約：</b>無條件同意所有條款。</li><li><b>約因：</b>須<span class="highlight">足夠</span>但不需充足。過去約因無效（例外：<span class="case-ref">Pao On案</span>）。</li><li><b>意圖：</b>商業協議推定有法律關係意圖。</li><li><b>確定性：</b>條款不能含糊。</li></ul></div></div></div></div>
+            <!-- 1.2 Offer vs I.T.T. -->
+            <div class="accordion"><button class="accordion-header"><span>1.2 Offer vs Invitation to Treat 要約 vs 要約邀請</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Offer vs Invitation to Treat</span>
+                    ├── <span class="branch">I.T.T. 要約邀請</span> — <span class="leaf">Display of goods (Fisher v Bell); Advertisement (Partridge v Crittenden); Auction</span>
+                └── <span class="branch">Offer 要約</span> — <span class="leaf">Vending machine; Unilateral advert (Carlill v Carbolic Smoke Ball)</span></div></div></div>
+            <!-- 1.3 Consideration -->
+            <div class="accordion"><button class="accordion-header"><span>1.3 Consideration & Promissory Estoppel 約因與允諾禁反言</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Consideration 約因</span>
+                    ├── <span class="branch">Sufficient but not adequate</span>
+                    ├── <span class="branch">Past consideration = INVALID</span> ── <span class="leaf">Exception: Pao On (implied promise)</span>
+                └── <span class="branch">Promissory Estoppel</span> ── <span class="leaf">High Trees House — shield not sword</span></div></div></div>
+            <!-- 1.4 Exclusion Clauses -->
+            <div class="accordion"><button class="accordion-header"><span>1.4 Exclusion Clauses 免責條款 & CECO (Cap.71)</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">3-Stage Test</span>
+                    ├── <span class="branch">1. Incorporation 納入</span> ── <span class="leaf">Proper notice before/at time</span>
+                    ├── <span class="branch">2. Construction 解釋</span> ── <span class="leaf">Contra proferentem</span>
+                └── <span class="branch">3. CECO Cap.71</span> ── <span class="leaf">Reasonableness test</span></div></div></div>
+            <!-- 1.5 Misrepresentation -->
+            <div class="accordion"><button class="accordion-header"><span>1.5 Misrepresentation 失實陳述 (Cap.284)</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Type</th><th>Definition</th><th>Remedy</th></tr></thead><tbody><tr><td><b>Fraudulent 欺詐</b></td><td>Knowing false (<span class="case-ref">Derry v Peek</span>)</td><td>Rescission + Damages</td></tr><tr><td><b>Negligent 疏忽</b></td><td>Careless false (<span class="case-ref">Hedley Byrne</span>)</td><td>Rescission + Damages</td></tr><tr><td><b>Innocent 無辜</b></td><td>Reasonable belief true</td><td>Rescission (discretionary)</td></tr></tbody></table></div></div>
+            <!-- 1.6 Breach Remedies -->
+            <div class="accordion"><button class="accordion-header"><span>1.6 Breach Remedies 違約救濟 & Hadley v Baxendale</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Remedies</span> ── <span class="leaf">Damages, Specific Performance, Injunction, Rescission</span>
+                    <span class="root">Remoteness (Hadley v Baxendale)</span>
+                    ├── <span class="leaf">1. Losses arising naturally</span>
+                └── <span class="leaf">2. Losses reasonably foreseeable</span></div></div></div>
+            <!-- 1.7 Frustration -->
+            <div class="accordion"><button class="accordion-header"><span>1.7 Frustration 合約受挫</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Definition:</b> Supervening event makes performance <span class="highlight">impossible</span> or <span class="highlight">radically different</span> (<span class="case-ref">Davis Contractors v Fareham UDC</span>). Not: self-induced, foreseeable, mere difficulty.</p></div></div>
+            <!-- 1.8 Conditions vs Warranties -->
+            <div class="accordion"><button class="accordion-header"><span>1.8 Conditions vs Warranties & Innominate Terms</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Term</th><th>Breach Effect</th><th>Remedy</th></tr></thead><tbody><tr><td><b>Condition</b></td><td>Repudiation allowed</td><td>Terminate + Damages</td></tr><tr><td><b>Warranty</b></td><td>No repudiation</td><td>Damages only</td></tr><tr><td><b>Innominate</b></td><td>Depends on severity</td><td>Case-by-case</td></tr></tbody></table></div></div>
+            <!-- 1.9 Tender -->
+            <div class="accordion"><button class="accordion-header"><span>1.9 Tender 投標/履行要約</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="content-grid"><div class="content-col"><h4>English</h4><ul><li>Unconditional offer of performance.</li><li>Wrongful refusal → tendering party discharged + may sue.</li><li>In procurement: bid submitted.</li></ul></div><div class="content-col"><h4>中文</h4><ul><li>無條件的履行要約（交付貨物、提出付款）。</li><li>無理拒絕→要約方獲解除義務並可索償。</li><li>公共採購中亦指「投標」。</li></ul></div></div></div></div>
+            <!-- 1.10 Third Parties Ordinance Cap.623 -->
+            <div class="accordion"><button class="accordion-header"><span>1.10 Contracts (Rights of Third Parties) Ord Cap.623 第三者權利</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Cap.623 第三者權利條例</span>
+                    ├── <span class="branch">S.4</span> — <span class="leaf">Third party may enforce if contract expressly confers benefit</span>
+                    ├── <span class="branch">S.5</span> — <span class="leaf">Third party must be identified by name/class/description</span>
+                └── <span class="branch">S.6</span> — <span class="leaf">Original parties may vary/rescind if third party not yet relied</span></div><p style="font-size:0.75rem;"><b>DOJ Relevance:</b> Frequently used in government contracts. HK aligning with UK reforms (UK 1999 Act).</p></div></div>
+            <!-- 1.11 Agency Law -->
+            <div class="accordion"><button class="accordion-header"><span>1.11 Agency Law 代理法</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Type</th><th>Definition</th></tr></thead><tbody><tr><td><b>Actual Authority</b></td><td>Express/implied authority given by principal</td></tr><tr><td><b>Apparent/Ostensible</b></td><td>Principal holds out to third party (<span class="case-ref">Freeman & Lockyer</span>)</td></tr><tr><td><b>By Necessity</b></td><td>Emergency to protect principal's interest</td></tr></tbody></table><p style="font-size:0.75rem;"><b>Ratification:</b> Principal can ratify unauthorised act within reasonable time (must be entire contract). <b>Warranty of Authority:</b> Agent liable if acting without authority (<span class="case-ref">Yonge v Toynbee</span>).</p></div></div>
+            <!-- 1.12 Discharge of Contract -->
+            <div class="accordion"><button class="accordion-header"><span>1.12 Discharge of Contract 合約解除</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Discharge 解除</span>
+                    ├── <span class="branch">Performance 履行</span>
+                    ├── <span class="branch">Agreement 協議</span>
+                    ├── <span class="branch">Breach 違約</span> — <span class="leaf">Repudiatory (condition breach); Anticipatory (Hochster v De La Tour)</span>
+                    ├── <span class="branch">Frustration 受挫</span>
+                └── <span class="branch">Operation of Law</span></div><p style="font-size:0.75rem;"><b>Anticipatory Breach:</b> Party indicates in advance they will not perform. Innocent party may sue immediately or wait.</p></div></div>
+            <!-- 1.13 Illegal Contracts -->
+            <div class="accordion"><button class="accordion-header"><span>1.13 Illegal Contracts 非法合約</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Category</th><th>Effect</th></tr></thead><tbody><tr><td><b>Illegal at formation</b></td><td>Void ab initio</td></tr><tr><td><b>Illegal in performance</b></td><td>May be enforceable if innocent party unaware</td></tr><tr><td><b>Ex turpi causa</b></td><td>No recovery if relying on own illegality (<span class="case-ref">Patel v Mirza</span>)</td></tr></tbody></table></div></div>
+        </div>
+
+        <!-- ═══════════════ TAB 2: CRIMINAL LAW ═══════════════ -->
+        <div class="tab-panel" id="criminal">
+            <div class="section-title"><span class="icon">⚔️</span> Criminal Law 刑法</div>
+            <!-- 2.1 Murder & Manslaughter -->
+            <div class="accordion"><button class="accordion-header"><span>2.1 Murder 謀殺 & Manslaughter 誤殺</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Homicide</span>
+                    ├── <span class="branch">Murder</span> — <span class="leaf">AR: unlawful killing; MR: intention to kill/GBH (Woollin)</span>
+                    ├── <span class="branch">UAM</span> — <span class="leaf">Intentional act; criminally unlawful; dangerous (Church)</span>
+                └── <span class="branch">GNM</span> — <span class="leaf">Duty of care; breach so bad = criminal (Adomako)</span></div></div></div>
+            <!-- 2.2 Non-Fatal Offences -->
+            <div class="accordion"><button class="accordion-header"><span>2.2 Non-Fatal Offences 非致命罪行</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Offence</th><th>AR</th><th>MR</th></tr></thead><tbody><tr><td><b>Assault</b></td><td>Causing apprehension of immediate force</td><td>Intention/Recklessness</td></tr><tr><td><b>Battery</b></td><td>Infliction of unlawful force</td><td>Intention/Recklessness</td></tr><tr><td><b>ABH s.39 CO</b></td><td>Assault/Battery + ABH</td><td>Same as assault/battery</td></tr><tr><td><b>GBH s.19</b></td><td>Unlawfully cause GBH</td><td>Maliciously (int/reck)</td></tr><tr><td><b>GBH s.17</b></td><td>Unlawfully cause GBH</td><td><b>Intention</b> to cause GBH</td></tr></tbody></table></div></div>
+            <!-- 2.3 Theft & Burglary -->
+            <div class="accordion"><button class="accordion-header"><span>2.3 Theft 盜竊 & Burglary 入屋犯法 (Cap.210)</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Theft s.9 Cap.210</span> — <span class="leaf">AR: Appropriation+Property+Belonging to another; MR: Dishonesty (Ghosh)+Intention to permanently deprive</span>
+                    <span class="root">Burglary s.11 Cap.210</span> — <span class="leaf">(a) Entry as trespasser with intent; (b) Having entered, stealing/inflicting GBH</span></div><p style="font-size:0.75rem;"><b>Key:</b> Burglary requires <span class="highlight">entry as trespasser into building</span>; theft does not. <span class="case-ref">Ghosh test</span> still followed in HK.</p></div></div>
+            <!-- 2.4 Robbery & Criminal Damage -->
+            <div class="accordion"><button class="accordion-header"><span>2.4 Robbery s.10 & Criminal Damage s.60 CO</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Robbery:</b> Theft + force <span class="highlight">immediately before/at time</span> (<span class="case-ref">Lockley</span>). <b>Criminal Damage:</b> Without lawful excuse destroys/damages property; MR: intention/recklessness (<span class="case-ref">R v G</span>). Arson = s.60(3).</p></div></div>
+            <!-- 2.5 Sexual Offences -->
+            <div class="accordion"><button class="accordion-header"><span>2.5 Sexual Offences (Rape s.118, Indecent Assault s.122)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Rape:</b> Sexual intercourse; V does not consent; D knows/reckless (<span class="case-ref">Satnam</span>). Genuine mistaken belief even if unreasonable (<span class="case-ref">Morgan</span>). <b>Indecent Assault:</b> Assault + circumstances of indecency (<span class="case-ref">Choi Wai Lun</span>).</p></div></div>
+            <!-- 2.6 Participation -->
+            <div class="accordion"><button class="accordion-header"><span>2.6 Participation (Accessory s.89 CPO & JCE)</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Accessory</span> — <span class="leaf">AR: Aid/Abet/Counsel/Procure; MR: Knowledge+Intention</span>
+                    <span class="root">Basic JCE</span> — <span class="leaf">Agreement to commit X → all liable</span>
+                <span class="root">Extended JCE</span> — <span class="leaf">Foresee Y as possible incident (Chan Wing Siu)</span></div></div></div>
+            <!-- 2.7 Defences -->
+            <div class="accordion"><button class="accordion-header"><span>2.7 Defences 抗辯</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Defence</th><th>Key Test</th><th>Murder?</th></tr></thead><tbody><tr><td><b>Self-Defence</b></td><td>Subjective belief + Objective reasonableness (<span class="case-ref">Palmer</span>)</td><td>Yes</td></tr><tr><td><b>Duress</b></td><td>Graham test; reasonable firmness (<span class="case-ref">Hasan</span>)</td><td><b>No</b></td></tr><tr><td><b>Intoxication</b></td><td>Voluntary: no defence for basic intent (<span class="case-ref">Majewski</span>)</td><td>May reduce</td></tr><tr><td><b>Provocation</b></td><td>s.4 Homicide Ord; sudden loss (<span class="case-ref">Duffy</span>)</td><td>Reduce to manslaughter</td></tr><tr><td><b>Diminished Resp.</b></td><td>s.3 Homicide Ord; substantial impairment (<span class="case-ref">Byrne</span>)</td><td>Reduce to manslaughter</td></tr><tr><td><b>Insanity</b></td><td>M'Naghten Rules; defect of reason; disease of mind</td><td>Special verdict</td></tr></tbody></table></div></div>
+            <!-- 2.8 Dangerous Drugs -->
+            <div class="accordion"><button class="accordion-header"><span>2.8 Dangerous Drug Trafficking (Cap.134)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><span class="ord-ref">Dangerous Drugs Ordinance Cap.134</span> — Trafficking: s.2 definition, s.4 offence. Also possession (s.8), manufacturing (s.6).</p></div></div>
+            <!-- 2.9 Deception Offences -->
+            <div class="accordion"><button class="accordion-header"><span>2.9 Deception Offences 欺詐罪行 (s.17 & s.18 Cap.210)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>s.17 Obtaining Property by Deception:</b> Obtains property belonging to another by deception (deliberate or reckless, by words or conduct); dishonestly + intention to permanently deprive.</p><p style="font-size:0.78rem;"><b>s.18 Obtaining Pecuniary Advantage:</b> Similar to s.17 but for pecuniary advantage (e.g., avoiding payment, credit). <b>DOJ Relevance:</b> Frequently prosecuted in commercial fraud & corruption cases.</p></div></div>
+            <!-- 2.10 Handling Stolen Goods -->
+            <div class="accordion"><button class="accordion-header"><span>2.10 Handling Stolen Goods 處理贓物 (s.24 Cap.210)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>AR:</b> Arranging to receive stolen goods / Assisting in retention/removal/disposal. <b>MR:</b> Knowledge or belief that goods are stolen. Goods must be <span class="highlight">stolen</span>.</p></div></div>
+            <!-- 2.11 Inchoate Offences -->
+            <div class="accordion"><button class="accordion-header"><span>2.11 Inchoate Offences 不完整罪行 (Attempt, Conspiracy, Incitement)</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Offence</th><th>AR</th><th>MR</th></tr></thead><tbody><tr><td><b>Attempt s.159G CO</b></td><td>Act <span class="highlight">more than merely preparatory</span> (<span class="case-ref">Gullefer</span>)</td><td>Intention to commit full offence; conditional intent suffices</td></tr><tr><td><b>Conspiracy s.159A CO</b></td><td>Agreement on course of conduct involving offence</td><td>Intention to agree + intention/knowledge of facts (<span class="case-ref">Saik</span>)</td></tr><tr><td><b>Incitement (CL)</b></td><td>Encouraging/pressurising another; must be communicated (<span class="case-ref">Cox</span>)</td><td>Intention to incite; can incite "the world" (<span class="case-ref">Invicta Plastics</span>)</td></tr></tbody></table></div></div>
+            <!-- 2.12 Strict Liability -->
+            <div class="accordion"><button class="accordion-header"><span>2.12 Strict Liability Offences 嚴格責任罪行</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Definition:</b> No mens rea required for one or more elements. Examples: traffic offences, food/drug safety, environmental, regulatory. <b>Defences:</b> Due diligence / reasonable steps; reasonable mistake of fact (subject to statute).</p></div></div>
+            <!-- 2.13 Transferred Malice -->
+            <div class="accordion"><button class="accordion-header"><span>2.13 Transferred Malice 轉移惡意</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;">MR towards X can be transferred to actual victim Y. Requirements: compatibility; no "double transfer" (<span class="case-ref">A-G's Ref (No.3/1994)</span>). Example: <span class="case-ref">R v Latimer</span> — D hit X with belt, missed and hit Y.</p></div></div>
+            <!-- 2.14 Coincidence Principle -->
+            <div class="accordion"><button class="accordion-header"><span>2.14 Coincidence Principle 同時性原則</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;">AR and MR must coincide in time. <b>Exceptions:</b> (1) Continuing Act (<span class="case-ref">Fagan</span>); (2) Duty (<span class="case-ref">Miller</span>); (3) Series of Acts / Single Transaction (<span class="case-ref">Thabo Meli</span>); (4) Dutch Courage (<span class="case-ref">Gallagher</span>).</p></div></div>
+        </div>
+
+        <!-- ═══════════════ TAB 3: ADMINISTRATIVE LAW ═══════════════ -->
+        <div class="tab-panel" id="admin">
+            <div class="section-title"><span class="icon">🏛️</span> Administrative Law / Judicial Review 行政法／司法覆核</div>
+            <!-- 3.1 Grounds -->
+            <div class="accordion"><button class="accordion-header"><span>3.1 Grounds for JR 司法覆核理由 (GCHQ)</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">GCHQ Grounds</span>
+                    ├── <span class="branch">Illegality</span> — <span class="leaf">Ultra vires, error of law, improper purpose, fettering, considerations</span>
+                    ├── <span class="branch">Irrationality/Wednesbury</span> — <span class="leaf">So unreasonable no reasonable authority could come to it</span>
+                    ├── <span class="branch">Procedural Impropriety</span> — <span class="leaf">Fair hearing, bias, natural justice</span>
+                └── <span class="branch">Legitimate Expectation</span> — <span class="leaf">Procedural & Substantive (Ng Siu Tung)</span></div><p style="font-size:0.72rem;"><span class="highlight">Proportionality</span> in fundamental rights cases under <span class="ord-ref">Cap.383 HK Bill of Rights Ordinance</span>.</p></div></div>
+            <!-- 3.2 Leave & Amenability -->
+            <div class="accordion"><button class="accordion-header"><span>3.2 Leave Requirements & Amenability</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Leave (O.53 r.4 RHC):</b> Reasonably arguable (<span class="case-ref">Po Fun Chan</span>); Standing — sufficient interest (s.21K(3) HCO); Promptness — <span class="highlight">3 months</span>; No alternative remedy.</p><p style="font-size:0.78rem;"><b>Amenability (<span class="case-ref">Datafin</span>):</b> Statutory power presumed. Public function: but-for test, government underpinning, monopolistic power, public funding.</p><p style="font-size:0.78rem;"><b>Ouster Clause:</b> Not effective for void/ultra vires decisions (<span class="case-ref">Anisminic</span>).</p></div></div>
+            <!-- 3.3 Illegality -->
+            <div class="accordion"><button class="accordion-header"><span>3.3 Illegality — Ultra Vires, Fettering, Considerations</span><span class="arrow">▼</span></button><div class="accordion-body"><ul style="font-size:0.78rem;"><li><b>Fettering:</b> Discretion must be exercised with open mind (<span class="case-ref">Venables; Li Tak Shing</span>).</li><li><b>Considerations:</b> Must consider mandatory relevant matters; must not consider irrelevant ones.</li><li><b>Error of Law:</b> All errors reviewable (<span class="case-ref">Anisminic; Page</span>).</li><li><b>Error of Fact (<span class="case-ref">E v Secretary of State</span>):</b> Mistake as to existing fact; established & verifiable; applicant not responsible; material.</li></ul></div></div>
+            <!-- 3.4 Procedural Impropriety -->
+            <div class="accordion"><button class="accordion-header"><span>3.4 Procedural Impropriety — Fair Hearing & Bias</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Fair Hearing (<span class="case-ref">Ridge v Baldwin</span>):</b> Right to be heard, notice, reasons (<span class="case-ref">Doody; Oriental Daily</span>), disclosure.</p><p style="font-size:0.78rem;"><b>Bias (<span class="case-ref">Deacons v White & Case</span>):</b> Actual, Presumed (pecuniary — <span class="case-ref">Dimes</span>), Apparent — "real possibility of bias" (<span class="case-ref">Porter v Magill</span>).</p></div></div>
+            <!-- 3.5 Wednesbury -->
+            <div class="accordion"><button class="accordion-header"><span>3.5 Wednesbury Unreasonableness & Sliding Scale</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Sliding Scale (SPH v Town Planning Board)</span>
+                    ├── <span class="leaf">Anxious Scrutiny → Fundamental rights</span>
+                    ├── <span class="leaf">Heightened → Important interests</span>
+                    ├── <span class="leaf">Standard Wednesbury → Ordinary</span>
+                └── <span class="leaf">Deferential → Policy/Economic</span></div></div></div>
+            <!-- 3.6 Legitimate Expectation -->
+            <div class="accordion"><button class="accordion-header"><span>3.6 Legitimate Expectation 合法期望</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Substantive LE (<span class="case-ref">Ng Siu Tung</span>):</b> Representation; clear & unambiguous; authority; knowledge. Departure only by <span class="highlight">overriding public interest</span>. <b>Procedural LE (<span class="case-ref">Ng Yuen Shiu</span>):</b> Promise or regular practice.</p></div></div>
+            <!-- 3.7 Procedural Exclusivity -->
+            <div class="accordion"><button class="accordion-header"><span>3.7 Procedural Exclusivity 程序排他性 (O'Reilly v Mackman)</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">O'Reilly v Mackman</span>
+                    ├── <span class="branch">Public law issues</span> → <span class="leaf">Must use JR</span>
+                    ├── <span class="branch">Private law issues</span> → <span class="leaf">Ordinary proceedings</span>
+                └── <span class="branch">Exceptions</span> → <span class="leaf">Collateral Attack (Wandsworth v Winder); Collateral Defence (Credit Suisse v Allerdale); Consent of Parties</span></div></div></div>
+            <!-- 3.8 Remedies -->
+            <div class="accordion"><button class="accordion-header"><span>3.8 JR Remedies 司法覆核救濟</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Remedy</th><th>Nature</th><th>Effect</th></tr></thead><tbody><tr><td><b>Certiorari 移審令</b></td><td>Discretionary</td><td>Quashes decision</td></tr><tr><td><b>Prohibition 禁止令</b></td><td>Discretionary</td><td>Prevents decision</td></tr><tr><td><b>Mandamus 履行令</b></td><td>Discretionary</td><td>Compels action</td></tr><tr><td><b>Declaration 宣告</b></td><td>Discretionary</td><td>Declares rights</td></tr><tr><td><b>Injunction 禁制令</b></td><td>s.21J HCO</td><td>Restrains action</td></tr><tr><td><b>Damages 損害賠償</b></td><td>s.21K(4) HCO</td><td>Monetary compensation</td></tr></tbody></table><p style="font-size:0.72rem;">All remedies are <span class="highlight">discretionary</span> (<span class="case-ref">Leung Fuk Wah</span>).</p></div></div>
+            <!-- 3.9 Basic Law Provisions -->
+            <div class="accordion"><button class="accordion-header"><span>3.9 Basic Law Provisions 基本法條文 (JR相關)</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Article</th><th>Content</th></tr></thead><tbody><tr><td><b>BL 35</b></td><td>Right to institute legal proceedings against Executive Authorities</td></tr><tr><td><b>BL 64</b></td><td>Government must abide by the law</td></tr><tr><td><b>BL 84</b></td><td>Courts shall adjudicate in accordance with applicable laws</td></tr></tbody></table></div></div>
+            <!-- 3.10 Duty to Give Reasons -->
+            <div class="accordion"><button class="accordion-header"><span>3.10 Duty to Give Reasons 給予理由義務</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>When required (<span class="case-ref">Institute of Dental Surgery</span>):</b> Individual interest highly important; decision appears aberrant. <b>Adequacy (<span class="case-ref">Oriental Daily</span>):</b> Must show reasoning process, not just conclusion. If no reasons → court may assume no good reasons (<span class="case-ref">Ex p Cunningham</span>).</p></div></div>
+        </div>
+
+        <!-- ═══════════════ TAB 4: EVIDENCE LAW ═══════════════ -->
+        <div class="tab-panel" id="evidence">
+            <div class="section-title"><span class="icon">🔍</span> Evidence Law 證據法</div>
+            <!-- 4.1 Types & Admissibility -->
+            <div class="accordion"><button class="accordion-header"><span>4.1 Types of Evidence & Admissibility</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Evidence</span> ── <span class="leaf">Testimony / Documentary / Real</span></div><p style="font-size:0.78rem;"><b>Admissibility:</b> Must be <span class="highlight">relevant</span>. Excluded if <span class="highlight">prejudicial effect > probative value</span> (<span class="case-ref">Lam Tat Ming</span>).</p></div></div>
+            <!-- 4.2 Witnesses -->
+            <div class="accordion"><button class="accordion-header"><span>4.2 Witnesses — Competence, Compellability & Examination</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Competence:</b> General (s.5 EO); D (s.54 CPO); spouse (s.57 CPO); child &lt;14 (s.4 EO unsworn); MIP (s.3(b) EO court consent).</p><p style="font-size:0.78rem;"><b>Exam-in-Chief:</b> No leading questions; no bolstering. <b>Hostile witness</b> (s.12 EO). <b>Cross-Exam:</b> Leading allowed; duty to put case (<span class="case-ref">Browne v Dunn</span>). <b>Rape Shield</b> (s.154(3) CO).</p><p style="font-size:0.78rem;"><span class="highlight">Civil vs Criminal:</span> Civil: written statements as evidence-in-chief; parties compellable. Criminal: oral exam-in-chief still common; accused has right to silence.</p></div></div>
+            <!-- 4.3 Affirmation -->
+            <div class="accordion"><button class="accordion-header"><span>4.3 Affirmation 非宗教宣誓 (Cap.11)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Affirmation:</b> Solemn non‑religious declaration — same legal effect as oath. <span class="ord-ref">Oaths and Declarations Ordinance Cap.11</span>. Used in court, affidavits, statutory declarations.</p></div></div>
+            <!-- 4.4 Hearsay -->
+            <div class="accordion"><button class="accordion-header"><span>4.4 Hearsay 傳聞證據 & Exceptions</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Definition:</b> Out-of-court statement to prove truth of contents (<span class="case-ref">Oei Hengky Wiryo</span>). <b>Exceptions:</b> Business Records (s.22 EO); Computer (s.22A); Bank (s.20); Written Statements (s.65B CPO); Res Gestae; Dying Declaration (<span class="case-ref">Nembhard</span>).</p></div></div>
+            <!-- 4.5 Confession -->
+            <div class="accordion"><button class="accordion-header"><span>4.5 Confession 自認供詞</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Confession (Lam Tat Ming)</span>
+                    ├── <span class="branch">Voluntary</span> — P prove BRD
+                    ├── <span class="branch">Made to Person in Authority</span>
+                    ├── <span class="branch">No Inducement</span> — (<span class="case-ref">Chau Ching Kay</span> 2-stage)
+                └── <span class="branch">No Oppression</span></div></div></div>
+            <!-- 4.6 ID & Character -->
+            <div class="accordion"><button class="accordion-header"><span>4.6 Identification (Turnbull) & Character Evidence</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Turnbull:</b> Judge examine quality; warn jury; specific weaknesses; supporting evidence. Recognition can be mistaken (<span class="case-ref">Gayle</span>).</p><p style="font-size:0.78rem;"><b>Good Character (<span class="case-ref">Berrada</span>):</b> Credibility + propensity. <b>Bad Character:</b> Makin rule; Zabel Ali 4-step; shield s.54(1)(f) CPO.</p></div></div>
+            <!-- 4.7 Expert & Trial -->
+            <div class="accordion"><button class="accordion-header"><span>4.7 Expert Evidence, Voir Dire & Stay</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Expert (<span class="case-ref">Un Mark William</span>):</b> Relevant, necessary, reliable. Duties: independent (<span class="case-ref">Ikarian Reefer</span>). <b>Voir Dire:</b> Separate hearing; D's evidence not admissible for general issue (<span class="case-ref">Ma Yee Keung</span>). <b>Stay (<span class="case-ref">Ng Chun To</span>):</b> Fair trial impossible / abuse of process.</p></div></div>
+            <!-- 4.8 Burden & Standard of Proof -->
+            <div class="accordion"><button class="accordion-header"><span>4.8 Burden & Standard of Proof 舉證責任與證明標準</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Situation</th><th>Legal Burden</th><th>Evidential Burden</th></tr></thead><tbody><tr><td>Prosecution case</td><td>P (BRD)</td><td>P</td></tr><tr><td>Self-defence</td><td>P (once raised)</td><td>D</td></tr><tr><td>Insanity</td><td>D (Balance)</td><td>D</td></tr><tr><td>Diminished Responsibility</td><td>D (Balance)</td><td>D</td></tr></tbody></table></div></div>
+            <!-- 4.9 Opinion Evidence -->
+            <div class="accordion"><button class="accordion-header"><span>4.9 Opinion Evidence — Lay Witness 非專家意見</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>General rule:</b> Only facts, not opinions. <b>Exceptions (s.58 EO, civil only):</b> Identity, age, physical/mental condition, value, speed, distance, weather — when opinion inseparable from facts.</p></div></div>
+            <!-- 4.10 Previous Inconsistent Statements -->
+            <div class="accordion"><button class="accordion-header"><span>4.10 Previous Inconsistent Statements (s.14 EO)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;">Cross-examiner may ask without showing. If witness denies → may produce (s.13 EO). If admitted → affects credibility; if confirmed → contents become evidence (non-hearsay).</p></div></div>
+            <!-- 4.11 Refreshing Memory -->
+            <div class="accordion"><button class="accordion-header"><span>4.11 Refreshing Memory 記憶刷新</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Out of Court:</b> Allowed — may refer to notes shortly after event (<span class="case-ref">Lee Wing Kan</span>). No coaching (<span class="case-ref">Wong Ka Ching</span>). <b>In Court:</b> May request permission; contemporaneous record preferred; non-contemporaneous affects weight (<span class="case-ref">See Wah Lun</span>).</p></div></div>
+            <!-- 4.12 Corroboration -->
+            <div class="accordion"><button class="accordion-header"><span>4.12 Corroboration — Abolished (with Residue)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Abolished:</b> Accomplices (s.60 CPO); Children (s.4A EO); Sexual offence complainants (s.4B EO). <b>Residue:</b> Real evidence still needs witness testimony (<span class="case-ref">Wong Cho Shing</span>); Perjury (s.43 CO); Judge may still give warning (<span class="case-ref">Wong Chi King</span>).</p></div></div>
+            <!-- 4.13 Immunity -->
+            <div class="accordion"><button class="accordion-header"><span>4.13 Advocate's & Witness Immunity</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Witness Immunity:</b> Absolute immunity from suit for evidence given in court. Cannot be sued for defamation. <b>Advocate's Immunity:</b> Abolished in UK; <span class="highlight">HK position: not yet abolished</span> (pending reform).</p></div></div>
+            <!-- 4.14 Self-Incrimination -->
+            <div class="accordion"><button class="accordion-header"><span>4.14 Privilege Against Self-Incrimination (s.65A EO)</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;">Right to refuse if would expose <span class="highlight">self or spouse</span> to proceedings. Limited to <b>HK offences</b> (<span class="case-ref">Salt & Light</span>). Does NOT apply to D's spouse in criminal proceedings (s.57(8) CPO). Statutory exceptions exist (e.g., s.63 Road Traffic Ordinance).</p></div></div>
+            <!-- 4.15 Informed Consent -->
+            <div class="accordion"><button class="accordion-header"><span>4.15 Informed Consent in Medical Context</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b><span class="case-ref">Montgomery v Lanarkshire</span> [2015]:</b> Doctor must disclose material risks that a reasonable patient would want to know. <b>Bolam test</b> no longer applies to consent.</p></div></div>
+        </div>
+
+        <!-- ═══════════════ TAB 5: LEGAL DRAFTING ═══════════════ -->
+        <div class="tab-panel" id="drafting">
+            <div class="section-title"><span class="icon">✍️</span> Legal Drafting 法律草擬（中文作答）</div>
+            <div class="accordion"><button class="accordion-header"><span>5.1 政府Legal Drafting以英文為準還是中文？</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">中英文本地位</span>
+                    ├── <span class="branch">《釋義及通則條例》(Cap.1)第10B條</span> ── <span class="leaf">中英文本均為真確文本，地位相同</span>
+                    ├── <span class="branch">《基本法》第九條</span> ── <span class="leaf">中文和英文都是正式語文</span>
+                    ├── <span class="branch">律政司法律草擬科</span> ── <span class="leaf">雙語文本法律權威完全相同</span>
+                └── <span class="branch">歧義處理</span> ── <span class="leaf">法院採用目的解釋，不預設某一語文優先</span></div><p style="font-size:0.78rem;">不存在「以英文為準」或「以中文為準」的主次關係，中英文本具<span class="highlight">同等法律效力</span>。</p></div></div>
+            <div class="accordion"><button class="accordion-header"><span>5.2 以前Drafting會用但現在不會有的用詞</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="content-grid"><div class="content-col"><h4>舊式用詞（已減少）</h4><ul><li>"hereby"（茲）</li><li>"thereof/whereof"（關乎）</li><li>"hereinbefore/hereinafter"</li><li>"aforesaid"、"said"</li><li>"notwithstanding"（現用「儘管」）</li><li>"whereas"（鑑於）</li></ul></div><div class="content-col"><h4>現代草擬趨勢</h4><ul><li>避免濫用"shall"→"must"/"is to be"</li><li>避免"he"→"he or she"或"person"</li><li>採用<span class="highlight">平易語言(Plain Language)</span></li><li>去除冗餘，清晰易讀</li></ul></div></div></div></div>
+            <div class="accordion"><button class="accordion-header"><span>5.3 雙語草擬原則與注意事項</span><span class="arrow">▼</span></button><div class="accordion-body"><ul style="font-size:0.78rem;"><li><b>同等效力：</b>中英文本皆為真確文本。</li><li><b>目的解釋：</b>歧義時尋求最能實現立法原意的解釋。</li><li><b>一致性：</b>同一概念使用一致的對應詞彙。</li><li><b>Plain Language：</b>避免古雅詞彙。</li><li><b>性別中立：</b>避免性別定型代詞。</li><li><b>結構清晰：</b>條、款、項層級結構。</li></ul></div></div>
+        </div>
+
+        <!-- ═══════════════ TAB 6: 香港立法程序 ═══════════════ -->
+        <div class="tab-panel" id="legislation">
+            <div class="section-title"><span class="icon">📋</span> 香港立法程序 Hong Kong Legislation Process</div>
+            <div class="accordion"><button class="accordion-header"><span>6.1 香港立法程序概要</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">香港立法程序</span>
+                    ├── <span class="branch">1. 提出法案</span> ── <span class="leaf">政府法案（經行政會議批准）／議員法案</span>
+                    ├── <span class="branch">2. 法律草擬</span> ── <span class="leaf">律政司法律草擬科草擬雙語條例草案</span>
+                    ├── <span class="branch">3. 立法會審議</span> ── <span class="leaf">首讀→二讀（可交法案委員會）→全體委員會審議→三讀通過</span>
+                    ├── <span class="branch">4. 行政長官簽署</span>
+                └── <span class="branch">5. 刊憲生效</span> ── <span class="leaf">《香港特別行政區政府憲報》刊登</span></div><p style="font-size:0.78rem;">律政司法律草擬科將政策轉化為精確雙語法律條文。<span class="ord-ref">《釋義及通則條例》(第1章)</span>規管解釋原則。</p></div></div>
+            <div class="accordion"><button class="accordion-header"><span>6.2 立法程序中的關鍵機構</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>機構</th><th>角色</th></tr></thead><tbody><tr><td><b>律政司法律草擬科</b></td><td>草擬所有政府條例草案，確保雙語精確</td></tr><tr><td><b>行政會議</b></td><td>審議並批准政府法案</td></tr><tr><td><b>立法會</b></td><td>三讀審議及通過法案</td></tr><tr><td><b>法案委員會</b></td><td>詳細審議，可邀公眾及專家</td></tr><tr><td><b>行政長官</b></td><td>簽署法案</td></tr><tr><td><b>憲報</b></td><td>刊登新法例</td></tr></tbody></table></div></div>
+        </div>
+
+        <!-- ═══════════════ TAB 7: DOJ-SPECIFIC ═══════════════ -->
+        <div class="tab-panel" id="doj">
+            <div class="section-title"><span class="icon">🏢</span> DOJ-Specific Knowledge 律政司專項知識</div>
+            <!-- 7.1 Structure -->
+            <div class="accordion"><button class="accordion-header"><span>7.1 Structure of the DOJ 律政司架構</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">DOJ 律政司</span>
+                    ├── <span class="branch">Legal Policy 法律政策科</span> — <span class="leaf">Legal reform, policy advice, human rights</span>
+                    ├── <span class="branch">Civil 民事法律科</span> — <span class="leaf">Civil litigation, government advisory</span>
+                    ├── <span class="branch">Prosecutions 刑事檢控科</span> — <span class="leaf">Criminal prosecutions, appeals</span>
+                    ├── <span class="branch">Law Drafting 法律草擬科</span> — <span class="leaf">Drafting legislation</span>
+                    ├── <span class="branch">International Law 國際法律科</span> — <span class="leaf">Treaties, international agreements</span>
+                └── <span class="branch">Administration 行政科</span></div></div></div>
+            <!-- 7.2 Prosecution Code -->
+            <div class="accordion"><button class="accordion-header"><span>7.2 Prosecution Code 檢控守則</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Prosecution Test 檢控測試</span>
+                    ├── <span class="branch">1. Evidential Test 證據測試</span> — <span class="leaf">Admissible & reliable evidence? Reasonable prospect of conviction?</span>
+                └── <span class="branch">2. Public Interest Test 公眾利益測試</span> — <span class="leaf">Seriousness; culpability; victim's circumstances; public concern</span></div><p style="font-size:0.75rem;"><b>Key Principles:</b> <span class="highlight">Independence</span> — prosecutors act independently. <span class="highlight">Fairness</span> — disclose all relevant material. Demonstrating knowledge shows genuine interest.</p></div></div>
+            <!-- 7.3 Legal Drafting Principles -->
+            <div class="accordion"><button class="accordion-header"><span>7.3 Legal Drafting Principles 法律草擬原則</span><span class="arrow">▼</span></button><div class="accordion-body"><ol style="font-size:0.78rem;"><li><b>Plain Language 淺白語言</b> — 避免過時/含糊術語</li><li><b>Precision 精確性</b> — 詞語須清晰明確</li><li><b>Consistency 一致性</b> — 相同概念使用相同術語</li><li><b>Harmony 與現行法律協調</b> — 須與其他法例一致</li><li><b>Constitutional Compliance 符合憲法</b> — 須符合《基本法》</li></ol></div></div>
+            <!-- 7.4 Statutory Interpretation -->
+            <div class="accordion"><button class="accordion-header"><span>7.4 Interpretation of Statutes 法例解釋</span><span class="arrow">▼</span></button><div class="accordion-body"><div class="mindmap"><span class="root">Interpretation Rules</span>
+                    ├── <span class="branch">Literal Rule 字面規則</span> — <span class="leaf">Ordinary meaning (HKSAR v Cheung Kwun Yin)</span>
+                    ├── <span class="branch">Golden Rule 黃金規則</span> — <span class="leaf">Modify to avoid absurdity</span>
+                    ├── <span class="branch">Mischief Rule 弊端規則</span> — <span class="leaf">What mischief was statute designed to remedy?</span>
+                └── <span class="branch">Purposive Approach 目的解釋</span> — <span class="leaf">PRIMARY in HK; Pepper v Hart (Hansard); Cap.1 s.19</span></div></div></div>
+            <!-- 7.5 Key Legislation -->
+            <div class="accordion"><button class="accordion-header"><span>7.5 Key Legislation for DOJ 律政司常用法例</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>Ordinance</th><th>Application</th></tr></thead><tbody><tr><td><b>Basic Law</b></td><td>Constitutional framework</td></tr><tr><td><b>Cap.1 Interpretation & General Clauses</b></td><td>Statutory interpretation</td></tr><tr><td><b>Cap.4 High Court Ordinance</b></td><td>Court procedure</td></tr><tr><td><b>Cap.200 Crimes Ordinance</b></td><td>Criminal offences</td></tr><tr><td><b>Cap.221 Criminal Procedure Ordinance</b></td><td>Criminal procedure</td></tr><tr><td><b>Cap.8 Evidence Ordinance</b></td><td>Evidence rules</td></tr><tr><td><b>Cap.87 Legal Officers Ordinance</b></td><td>DOJ officers' powers</td></tr></tbody></table></div></div>
+            <!-- 7.6 Sample Interview Q -->
+            <div class="accordion"><button class="accordion-header"><span>7.6 Sample Interview Question 面試示例</span><span class="arrow">▼</span></button><div class="accordion-body"><p style="font-size:0.78rem;"><b>Q: "What is the role of the Secretary for Justice in upholding the rule of law?"</b></p><p style="font-size:0.75rem;"><b>A:</b> (1) <b>Independent Prosecutions</b> — based on evidence & public interest; (2) <b>Legal Advice</b> — advising Government on legality; (3) <b>Legislative Drafting</b> — ensuring Basic Law compliance; (4) <b>Civil Litigation</b> — representing Government; (5) <b>Constitutional Guardian</b> — protecting Basic Law consistency.</p><p style="font-size:0.75rem;"><b>中文：</b>律政司司長在維護法治方面：獨立檢控、提供法律意見、法律草擬、民事訴訟代表、憲法守護者。</p></div></div>
+            <!-- 7.7 Key Values -->
+            <div class="accordion"><button class="accordion-header"><span>7.7 Key DOJ Values & Buzzwords 核心價值</span><span class="arrow">▼</span></button><div class="accordion-body"><table class="info-table"><thead><tr><th>English</th><th>中文</th></tr></thead><tbody><tr><td>Rule of Law</td><td>法治</td></tr><tr><td>Justice</td><td>公義</td></tr><tr><td>Public Interest</td><td>公眾利益</td></tr><tr><td>Independence</td><td>獨立性</td></tr><tr><td>Fairness</td><td>公平</td></tr><tr><td>Transparency</td><td>透明度</td></tr><tr><td>Accountability</td><td>問責性</td></tr><tr><td>Basic Law</td><td>基本法</td></tr><tr><td>National Security</td><td>國家安全</td></tr><tr><td>Prosecution Code</td><td>檢控守則</td></tr></tbody></table></div></div>
+        </div>
+
+        <div class="footer">
+            ⚖️ DOJ Trainee Solicitor Interview Preparation · 律政司見習律師面試完整復習資料<br>
+            <span style="font-size:0.68rem;">Contract · Criminal · Admin/JR · Evidence · Legal Drafting · Legislation Process · DOJ-Specific</span><br>
+            <span style="font-size:0.62rem;">Good luck! 祝你面試順利！🎉</span>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const tabNav = document.getElementById('tabNav');
+            const tabBtns = tabNav.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const target = this.getAttribute('data-tab');
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    tabPanels.forEach(p => { p.classList.remove('active'); if (p.id === target) p
+                            .classList.add('active'); });
+                    window.scrollTo({ top: tabNav.offsetTop - 100, behavior: 'smooth' });
+                    try { localStorage.setItem('doj-active-tab', target); } catch (e) {}
+                });
+            });
+            try { const s = localStorage.getItem('doj-active-tab'); if (s) { const b = tabNav.querySelector(
+                        `[data-tab="${s}"]`); if (b) b.click(); } } catch (e) {}
+
+            document.querySelectorAll('.accordion-header').forEach(h => {
+                h.addEventListener('click', function() {
+                    const acc = this.parentElement;
+                    const panel = acc.closest('.tab-panel');
+                    if (panel) panel.querySelectorAll('.accordion.open').forEach(a => { if (a !== acc) a
+                            .classList.remove('open'); });
+                    acc.classList.toggle('open');
+                    const body = acc.querySelector('.accordion-body');
+                    if (body && acc.classList.contains('open')) body.style.maxHeight = body
+                        .scrollHeight + 60 + 'px';
+                    try {
+                        const openIds = [];
+                        document.querySelectorAll('.accordion.open').forEach(a => {
+                            const p = a.closest('.tab-panel');
+                            const hd = a.querySelector('.accordion-header span:first-child');
+                            if (p && hd) openIds.push(p.id + '|||' + hd.textContent.trim()
+                                .substring(0, 40));
+                        });
+                        localStorage.setItem('doj-open-acc', JSON.stringify(openIds));
+                    } catch (e) {}
+                });
+                h.setAttribute('tabindex', '0');
+                h.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e
+                        .preventDefault();
+                        this.click(); } });
+            });
+
+            function restoreAcc() {
+                try {
+                    const saved = localStorage.getItem('doj-open-acc');
+                    if (!saved) return false;
+                    JSON.parse(saved).forEach(id => {
+                        const [pid, htxt] = id.split('|||');
+                        const panel = document.getElementById(pid);
+                        if (panel) panel.querySelectorAll('.accordion').forEach(acc => {
+                            const hd = acc.querySelector('.accordion-header span:first-child');
+                            if (hd && hd.textContent.trim().substring(0, 40) === htxt) acc
+                                .classList.add('open');
+                        });
+                    });
+                    return true;
+                } catch (e) { return false; }
+            }
+            if (!restoreAcc()) {
+                const ap = document.querySelector('.tab-panel.active');
+                if (ap) { const a = ap.querySelector('.accordion'); if (a) a.classList.add('open'); }
+            }
+            document.querySelectorAll('.accordion.open .accordion-body').forEach(b => { b.style.maxHeight = b
+                    .scrollHeight + 60 + 'px'; });
+            let rt;
+            window.addEventListener('resize', () => { clearTimeout(rt);
+                rt = setTimeout(() => { document.querySelectorAll('.accordion.open .accordion-body').forEach(
+                        b => { b.style.maxHeight = 'none';
+                        b.style.maxHeight = b.scrollHeight + 60 + 'px'; }); }, 300); });
+            console.log('⚖️ DOJ Complete Interview Prep loaded. Good luck!');
+        })();
+    </script>
+</body>
+</html>
